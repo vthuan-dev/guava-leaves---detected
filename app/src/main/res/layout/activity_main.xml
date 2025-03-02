@@ -59,22 +59,18 @@
 
     <!-- Nút để dùng ảnh đã tải -->
     <Button
-        android:id="@+id/btn_use_downloaded"
+        android:id="@+id/btn_use_loaded_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Dùng ảnh đã tải"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#9575CD"
-        android:textColor="@color/white"/>
+        android:visibility="gone" />
 
     <!-- Nút để dùng ảnh từ thư viện Camera -->
     <Button
-        android:id="@+id/btn_use_camera_image"
+        android:id="@+id/btn_use_gallery_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Dùng ảnh từ thư viện"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#9575CD"
-        android:textColor="@color/white"/>
+        android:visibility="gone" />
 
 </LinearLayout>

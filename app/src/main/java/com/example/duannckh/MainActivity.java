@@ -113,6 +113,18 @@ public class MainActivity extends AppCompatActivity {
         
         // Kiểm tra quyền
         checkAndRequestPermissions();
+
+        // Tìm và ẩn hai button ở cuối
+        Button btnUseLoadedImage = findViewById(R.id.btn_use_loaded_image); // Cần thay ID chính xác
+        Button btnUseGalleryImage = findViewById(R.id.btn_use_gallery_image); // Cần thay ID chính xác
+        
+        if (btnUseLoadedImage != null) {
+            btnUseLoadedImage.setVisibility(View.GONE);
+        }
+        
+        if (btnUseGalleryImage != null) {
+            btnUseGalleryImage.setVisibility(View.GONE);
+        }
     }
 
     private void createApiService() {
