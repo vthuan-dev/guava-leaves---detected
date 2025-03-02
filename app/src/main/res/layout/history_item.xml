@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:background="?android:attr/selectableItemBackground">
+
+
+    <!-- Hình ảnh bên trái -->
+    <ImageView
+        android:id="@+id/image_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        />
+
+
+    <!-- Ngày giờ bên phải (phía trên) -->
+    <TextView
+        android:id="@+id/text_date_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:text="Ngày giờ"
+        android:textSize="14sp"
+        android:textColor="@android:color/black" />
+
+
+    <!-- Tên bệnh bên phải (phía dưới) -->
+    <TextView
+        android:id="@+id/text_disease_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_date_time"
+        android:layout_alignParentEnd="true"
+        android:text="Tên bệnh"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="4dp" />
+
+
+</RelativeLayout>
+
+
+

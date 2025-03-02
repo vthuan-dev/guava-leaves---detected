@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    android:background="@drawable/nen15">
+
+    <!-- Sử dụng LinearLayout ngang để bố trí hình ảnh và chữ Smart Agriculture -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_gravity="start|top"
+        android:layout_marginTop="0dp">
+
+        <!-- Thêm ImageView để hiển thị hình ảnh cây trồng -->
+        <ImageView
+            android:id="@+id/img_caytrongchau"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/caytrongchau1"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/image_description"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TRANG CHỦ"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <!-- Thêm TextView để hiển thị thông tin bệnh -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+
+    <!-- Thanh ngang kẻ gạch -->
+    <LinearLayout
+        android:id="@+id/indicatorLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
+
+
+    <!-- Thêm TextView cho thông tin thời tiết -->
+    <TextView
+        android:id="@+id/weather_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thông tin thời tiết"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Thêm TextViews cho thông tin thời tiết chi tiết -->
+
+
+    <!-- Bảng thông tin thời tiết -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
+
+        <TableRow>
+            <!-- Cột đầu tiên chứa tiêu đề "Nhiệt độ" -->
+
+
+            <!-- Hàng trên của 2 cột còn lại gộp lại thành 1 ô, chứa tên tỉnh -->
+            <TextView
+                android:id="@+id/location_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cần Thơ"
+                android:layout_span="3"
+                android:gravity="center"
+                android:textSize="32sp"
+                android:textColor="@color/white"
+                android:padding="5dp"/>
+        </TableRow>
+
+        <TableRow>
+            <!-- Cột đầu tiên hiển thị giá trị nhiệt độ -->
+            <TextView
+                android:id="@+id/temperature_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30°C"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:padding="5dp"/>
+
+            <!-- Các ô thông tin khác -->
+            <TextView
+                android:id="@+id/rain_chance_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mưa: 50%"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:padding="5dp"/> <!-- Điều chỉnh lại padding -->
+
+            <TextView
+                android:id="@+id/humidity_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Độ ẩm: 60%"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:padding="5dp"/> <!-- Điều chỉnh lại padding -->
+        </TableRow>
+    </TableLayout>
+
+
+
+    <!-- View ảo để đẩy các nút xuống dưới -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- LinearLayout để căn các nút ngang hàng nhau ở dưới cùng -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-20dp"
+        android:gravity="center"
+        android:orientation="horizontal">  <!-- Thêm marginTop để đẩy xuống dưới -->
+
+        <!-- LinearLayout dọc để chứa nút home và văn bản home -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- Sử dụng ImageButton để thay thế Button cho nút home -->
+            <ImageButton
+                android:id="@+id/btn_home"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:contentDescription="@string/view_disease"
+                android:scaleType="centerInside"
+                android:src="@drawable/home2c" />
+
+            <!-- Thêm văn bản home dưới nút home -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Home"
+                android:textColor="@color/red"
+                android:textSize="12sp"
+                android:textStyle="bold" />  <!-- Thêm thuộc tính này để in đậm chữ -->
+        </LinearLayout>
+
+        <!-- View ảo để tạo khoảng cách giữa nút home và nút xem bệnh -->
+        <View
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <!-- Sử dụng ImageButton để thay thế Button cho nút Xem bệnh -->
+        <ImageButton
+            android:id="@+id/btn_view_disease"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="-10dp"
+            android:background="@null"
+            android:contentDescription="@string/view_disease"
+            android:scaleType="centerInside"
+            android:src="@drawable/mayanh1" /> <!-- Giá trị âm để dịch nút lên trên -->
+
+        <!-- View ảo để tạo khoảng cách giữa nút nút xem bệnh và nút xem lịch sử -->
+        <View
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <!-- LinearLayout dọc để chứa nút Xem lịch sử và văn bản Xem lịch sử -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/btn_view_history"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@null"
+                android:contentDescription="@string/view_history"
+                android:scaleType="centerInside"
+                android:src="@drawable/anhlichsu3c" />
+
+            <!-- Thêm văn bản Xem lịch sử dưới nút Xem lịch sử -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Xem lịch sử"
+                android:textColor="@color/red"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

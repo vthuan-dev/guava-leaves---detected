@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/green" /> <!-- Nền xanh lá cây -->
+    <stroke android:width="2dp" android:color="@color/green" /> <!-- Viền xanh lá cây -->
+    <corners android:radius="10dp" /> <!-- Góc bo tròn 10dp -->
+</shape>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_dialog"
+    android:orientation="vertical"
+    android:elevation="8dp"
+    android:padding="16dp"
+    android:gravity="start"> <!-- Căn tất cả về bên trái -->
+
+
+    <!-- Layout chứa nút đóng popup (Dấu X) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"> <!-- Dấu X nằm bên phải -->
+
+
+        <ImageButton
+            android:id="@+id/btnClosePopup"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="8dp"
+            android:scaleType="center"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:contentDescription="Đóng"
+            app:tint="@android:color/black"/>
+    </LinearLayout>
+
+
+    <!-- Tiêu đề -->
+    <TextView
+        android:id="@+id/txtPopupTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thông tin"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="4dp" />
+
+
+    <!-- Hình ảnh -->
+    <ImageView
+        android:id="@+id/imgPopup"
+        android:layout_width="500dp"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="10dp" />
+
+
+    <!-- Tiêu đề triệu chứng -->
+    <TextView
+        android:id="@+id/txtSymptomTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Triệu chứng"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="10dp"/>
+
+
+    <!-- Nội dung triệu chứng -->
+    <TextView
+        android:id="@+id/txtSymptomContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đây là thông tin triệu chứng..."
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:paddingTop="8dp"/>
+
+
+</LinearLayout>
+
+
+

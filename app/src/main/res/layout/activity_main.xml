@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- ImageView để hiển thị ảnh người dùng đã chọn hoặc chụp -->
+    <ImageView
+        android:id="@+id/imagePreview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scaleType="centerInside"
+        android:contentDescription="Hình ảnh xem trước" />
+    
+    <!-- ProgressBar hiển thị khi đang xử lý -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:visibility="gone" />
+
+    <!-- Nút để chọn ảnh từ thư viện -->
+    <Button
+        android:id="@+id/btn_choose_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Chọn ảnh từ thư viện"
+        android:textSize="20sp"
+        android:backgroundTint="@color/green"
+        android:textColor="@color/white"/>
+
+    <!-- Nút để chụp ảnh bằng camera -->
+    <Button
+        android:id="@+id/btn_capture_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Chụp ảnh từ camera"
+        android:textSize="20sp"
+        android:backgroundTint="@color/green"
+        android:textColor="@color/white"/>
+
+    <!-- Nút để xem kết quả -->
+    <Button
+        android:id="@+id/btn_view_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Xem kết quả"
+        android:textSize="20sp"
+        android:backgroundTint="@color/green"
+        android:textColor="@color/white"/>
+
+    <!-- Nút để dùng ảnh đã tải -->
+    <Button
+        android:id="@+id/btn_use_downloaded"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dùng ảnh đã tải"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#9575CD"
+        android:textColor="@color/white"/>
+
+    <!-- Nút để dùng ảnh từ thư viện Camera -->
+    <Button
+        android:id="@+id/btn_use_camera_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dùng ảnh từ thư viện"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#9575CD"
+        android:textColor="@color/white"/>
+
+</LinearLayout>
